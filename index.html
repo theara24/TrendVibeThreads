@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TrendVibe Threads offers stylish, sustainable, and inclusive clothing for all. Explore our latest collections and shop eco-friendly fashion today!"
+    />
+    <meta
+      name="keywords"
+      content="clothing, fashion, sustainable fashion, inclusive fashion, TrendVibe Threads, apparel"
+    />
+    <meta
+      property="og:title"
+      content="TrendVibe Threads - Sustainable & Stylish Fashion"
+    />
+    <meta
+      property="og:description"
+      content="Discover trendy, eco-friendly, and inclusive clothing at TrendVibe Threads. Shop now for the latest collections!"
+    />
+    <meta property="og:image" content="images/fashion-og-image.png" />
+    <title>TrendVibe Threads - Sustainable & Stylish Clothing</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: #ff6f61;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .nav-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-icons a {
+        margin-left: 20px;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s;
+        text-decoration: none;
+      }
+
+      .nav-icons a:hover {
+        color: #ff6f61;
+      }
+
+      .cart-count {
+        position: relative;
+      }
+
+      .cart-count span {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #ff6f61;
+        color: #fff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero {
+        background: url('images/homepage.png') no-repeat center/cover;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+      .active {
+        color: #ff6f61;
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero .btn {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 14px 35px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        margin: 0 15px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .hero .btn:hover {
+        background-color: #e55a50;
+        transform: scale(1.05);
+      }
+
+      .hero .btn-secondary {
+        background-color: #d4a373;
+      }
+
+      .hero .btn-secondary:hover {
+        background-color: #b8864f;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 40px;
+        color: #1a1a1a;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title h2::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background-color: #ff6f61;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .welcome-section {
+        padding: 100px 0;
+        background-color: #fff;
+      }
+
+      .welcome-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .welcome-text h3 {
+        font-size: 28px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .welcome-text p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .welcome-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .welcome-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .welcome-image:hover img {
+        transform: scale(1.05);
+      }
+
+      .featured-collections {
+        padding: 100px 0;
+        background-color: #f9f9f9;
+      }
+
+      .collections-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .collection-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .collection-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .collection-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .collection-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .collection-info {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        color: #fff;
+      }
+
+      .collection-info h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+
+      .collection-info a {
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        transition: background-color 0.3s;
+      }
+
+      .collection-info a:hover {
+        background-color: #e55a50;
+      }
+
+      .new-arrivals {
+        padding: 100px 0;
+        background-color: #fff;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 40px;
+      }
+
+      .product-card {
+        background-color: #f9f9f9;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        text-align: center;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .product-card h3 {
+        font-size: 20px;
+        color: #1a1a1a;
+        margin: 20px 0 10px;
+      }
+
+      .product-card .price {
+        color: #ff6f61;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .product-card a {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .product-card a:hover {
+        background-color: #e55a50;
+      }
+
+      .why-shop {
+        padding: 100px 0;
+        background-color: #f9f9f9;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+      }
+
+      .why-card {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .why-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .why-icon {
+        font-size: 50px;
+        color: #ff6f61;
+        margin-bottom: 25px;
+      }
+
+      .why-card h3 {
+        font-size: 22px;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+      }
+
+      .why-card p {
+        font-size: 15px;
+        color: #555;
+      }
+
+      .customer-reviews {
+        padding: 100px 0;
+        background-color: #fff;
+      }
+
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .review-card {
+        background-color: #f9f9f9;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+      }
+
+      .review-card::before {
+        content: '“';
+        font-size: 60px;
+        color: #ff6f61;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        opacity: 0.3;
+      }
+
+      .review-card p {
+        font-size: 16px;
+        color: #555;
+        font-style: italic;
+        margin-bottom: 25px;
+      }
+
+      .review-card .author {
+        font-size: 16px;
+        color: #ff6f61;
+        font-weight: 500;
+      }
+
+      .style-quiz {
+        padding: 100px 0;
+        background: url('images/quiz-bg.jpg') no-repeat center/cover;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+
+      .style-quiz::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .quiz-content {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .quiz-content h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      .quiz-content p {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      .quiz-content a {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 14px 35px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .quiz-content a:hover {
+        background-color: #e55a50;
+      }
+
+      .blog-highlights {
+        padding: 100px 0;
+        background-color: #f9f9f9;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .blog-card {
+        background-color: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .blog-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .blog-card h3 {
+        font-size: 20px;
+        color: #1a1a1a;
+        margin: 20px;
+      }
+
+      .blog-card .blog-date {
+        font-size: 14px;
+        color: #777;
+        margin: 0 20px 10px;
+      }
+
+      .blog-card .blog-excerpt {
+        font-size: 15px;
+        color: #555;
+        margin: 0 20px 20px;
+      }
+
+      .blog-card a {
+        display: block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 0 20px 20px;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+
+      .blog-card a:hover {
+        background-color: #e55a50;
+      }
+
+      .sustainability {
+        padding: 100px 0;
+        background-color: #fff;
+      }
+
+      .sustainability-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .sustainability-text h3 {
+        font-size: 28px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .sustainability-text p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .sustainability-text a {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        transition: background-color 0.3s;
+      }
+
+      .sustainability-text a:hover {
+        background-color: #e55a50;
+      }
+
+      .sustainability-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sustainability-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .sustainability-image:hover img {
+        transform: scale(1.05);
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 80px 0 0;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 50px;
+        margin-bottom: 50px;
+      }
+
+      .footer-logo {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-logo span {
+        color: #ff6f61;
+      }
+
+      .footer-about p {
+        margin-bottom: 25px;
+        color: #bdc3c7;
+        font-size: 15px;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 20px;
+      }
+
+      .footer-social a {
+        color: #fff;
+        background-color: #2c2c2c;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+
+      .footer-social a:hover {
+        background-color: #ff6f61;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      .footer-links h3::after,
+      .footer-contact h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #ff6f61;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links ul li {
+        margin-bottom: 15px;
+      }
+
+      .footer-links ul li a {
+        color: #bdc3c7;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 15px;
+      }
+
+      .footer-links ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .footer-contact p {
+        margin-bottom: 20px;
+        color: #bdc3c7;
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+      }
+
+      .footer-contact i {
+        margin-right: 15px;
+        color: #ff6f61;
+      }
+
+      .payment-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .payment-icons img {
+        height: 35px;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+      }
+
+      .payment-icons img:hover {
+        filter: grayscale(0%);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 25px 0;
+        border-top: 1px solid #2c2c2c;
+        color: #bdc3c7;
+        font-size: 15px;
+      }
+
+      .footer-bottom a {
+        color: #ff6f61;
+        text-decoration: none;
+      }
+
+      .footer-bottom a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1200px) {
+        .hero h1 {
+          font-size: 50px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
+
+        .collection-card img {
+          height: 350px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .welcome-content,
+        .sustainability-content {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .section-title h2 {
+          font-size: 34px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          padding: 15px 0;
+        }
+
+        nav ul {
+          margin-top: 20px;
+        }
+
+        nav ul li {
+          margin-left: 20px;
+        }
+
+        .hero {
+          height: 500px;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        .section-title h2 {
+          font-size: 30px;
+        }
+
+        .collection-card img {
+          height: 300px;
+        }
+
+        .product-card img {
+          height: 240px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .hero .btn {
+          padding: 10px 20px;
+          font-size: 14px;
+          margin: 5px;
+        }
+
+        .section-title h2 {
+          font-size: 26px;
+        }
+
+        .collection-card img {
+          height: 250px;
+        }
+
+        .product-card img {
+          height: 200px;
+        }
+
+        .why-card,
+        .review-card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">TrendVibe<span>Threads</span></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="pages/shop.html">Shop</a></li>
+            <li><a href="pages/collection.html">Collections</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#" class="cart-count"
+            ><i class="fas fa-shopping-bag"></i><span>2</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Style Your Vibe</h1>
+          <p>
+            Discover sustainable, inclusive, and trendy fashion at TrendVibe
+            Threads. Shop our latest collections and elevate your wardrobe
+            today!
+          </p>
+          <div>
+            <a href="#" class="btn">Shop Now</a>
+            <a href="@" class="btn btn-secondary">Fall 2025 Collection</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="welcome-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Welcome to TrendVibe Threads</h2>
+          </div>
+          <div class="welcome-content">
+            <div class="welcome-text">
+              <h3>Your Fashion, Your Story</h3>
+              <p>
+                At TrendVibe Threads, we believe fashion is a powerful way to
+                express who you are. Since our founding in 2018, we’ve been
+                dedicated to creating clothing that’s not only stylish but also
+                sustainable and inclusive.
+              </p>
+              <p>
+                Our collections are designed with care, using eco-friendly
+                materials and ethical production methods. From casual everyday
+                wear to statement pieces for special occasions, we offer
+                something for everyone, regardless of size, style, or vibe.
+              </p>
+              <p>
+                Join our community of fashion-forward individuals who care about
+                quality, sustainability, and individuality. Let’s make every
+                outfit a reflection of your unique story.
+              </p>
+            </div>
+            <div class="welcome-image">
+              <img
+                src="images/brand-story.jpg"
+                alt="TrendVibe Threads fashion showcase"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-collections">
+        <div class="container">
+          <div class="section-title">
+            <h2>Explore Our Collections</h2>
+          </div>
+          <div class="collections-grid">
+            <div class="collection-card">
+              <img src="images/mens-collection.jpg" alt="Men's Collection" />
+              <div class="collection-info">
+                <h3>Men's Collection</h3>
+                <a href="#">Shop Now</a>
+              </div>
+            </div>
+            <div class="collection-card">
+              <img src="images/accessories-collection.jpg" alt="Accessories" />
+              <div class="collection-info">
+                <h3>Accessories</h3>
+                <a href="#">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-arrivals">
+        <div class="container">
+          <div class="section-title">
+            <h2>New Arrivals</h2>
+          </div>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/denim-jacket.jpg" alt="Denim Jacket" />
+              <h3>Denim Jacket</h3>
+              <p class="price">$79.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/graphic-tee.jpg" alt="Graphic Tee" />
+              <h3>Graphic Tee</h3>
+              <p class="price">$29.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/chinos.jpg" alt="Slim Fit Chinos" />
+              <h3>Slim Fit Chinos</h3>
+              <p class="price">$59.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/sneakers.jpg" alt="Casual Sneakers" />
+              <h3>Casual Sneakers</h3>
+              <p class="price">$99.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/sweater.jpg" alt="Knit Sweater" />
+              <h3>Knit Sweater</h3>
+              <p class="price">$49.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/scarf.jpg" alt="Wool Scarf" />
+              <h3>Wool Scarf</h3>
+              <p class="price">$24.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/cloth4.png" alt="Casual Sneakers" />
+              <h3>Casual Sneakers</h3>
+              <p class="price">$99.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+            <div class="product-card">
+              <img src="images/hudson.png" alt="Knit Sweater" />
+              <h3>Knit Sweater</h3>
+              <p class="price">$49.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-shop">
+        <div class="container">
+          <div class="section-title">
+            <h2>Why Choose TrendVibe Threads</h2>
+          </div>
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3>Sustainable Fashion</h3>
+              <p>
+                We use eco-friendly materials and ethical production to create
+                clothing that’s kind to the planet.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3>Premium Quality</h3>
+              <p>
+                Our clothing is crafted with top-tier materials for comfort,
+                durability, and timeless style.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Inclusive Designs</h3>
+              <p>
+                We offer sizes and styles for every body, ensuring everyone can
+                express their unique vibe.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h3>Fast Shipping</h3>
+              <p>
+                Enjoy quick and reliable delivery to get your new favorites
+                delivered right to your door.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="customer-reviews">
+        <div class="container">
+          <div class="section-title">
+            <h2>What Our Customers Say</h2>
+          </div>
+          <div class="review-grid">
+            <div class="review-card">
+              <p>
+                "The denim jacket is absolutely stunning! The quality is
+                top-notch, and it’s my go-to for casual outings."
+              </p>
+              <p class="author">Sarah M.</p>
+            </div>
+            <div class="review-card">
+              <p>
+                "I’m obsessed with the graphic tees! They’re so unique,
+                comfortable, and perfect for my style."
+              </p>
+              <p class="author">James T.</p>
+            </div>
+            <div class="review-card">
+              <p>
+                "Fast shipping and eco-friendly packaging made my shopping
+                experience amazing. TrendVibe is my favorite!"
+              </p>
+              <p class="author">Emma L.</p>
+            </div>
+            <div class="review-card">
+              <p>
+                "The sustainable collection is a game-changer. I love knowing my
+                clothes are good for the planet."
+              </p>
+              <p class="author">Liam K.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="style-quiz">
+        <div class="container quiz-content">
+          <h2>Find Your Perfect Style</h2>
+          <p>
+            Take our quick style quiz to get personalized outfit recommendations
+            that match your vibe. Discover pieces that make you feel confident
+            and stylish!
+          </p>
+          <a href="#">Take the Quiz</a>
+        </div>
+      </section>
+
+      <section class="blog-highlights">
+        <div class="container">
+          <div class="section-title">
+            <h2>Fashion Tips & Trends</h2>
+          </div>
+          <div class="blog-grid">
+            <div class="blog-card">
+              <img src="images/blog1.png" alt="Fall Fashion Trends" />
+              <h3>Top Fall Fashion Trends for 2025</h3>
+              <p class="blog-date">Posted on April 15, 2025</p>
+              <p class="blog-excerpt">
+                Get ready for the season with bold colors, cozy layers, and
+                sustainable fabrics that define Fall 2025 fashion.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+              <img src="images/blog2.png" alt="Sustainable Fashion Guide" />
+              <h3>Guide to Sustainable Fashion</h3>
+              <p class="blog-date">Posted on April 10, 2025</p>
+              <p class="blog-excerpt">
+                Learn how to build an eco-friendly wardrobe without compromising
+                on style or quality.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+              <img src="images/blog3.png" alt="Capsule Wardrobe" />
+              <h3>Building a Capsule Wardrobe</h3>
+              <p class="blog-date">Posted on April 5, 2025</p>
+              <p class="blog-excerpt">
+                Discover the essential pieces you need to create a versatile,
+                timeless wardrobe that works for any occasion.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sustainability">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Commitment to Sustainability</h2>
+          </div>
+          <div class="sustainability-content">
+            <div class="sustainability-text">
+              <h3>Fashion with a Purpose</h3>
+              <p>
+                At TrendVibe Threads, sustainability is at the heart of
+                everything we do. We use organic cotton, recycled polyester, and
+                other eco-friendly materials to create clothing that’s kind to
+                the planet.
+              </p>
+              <p>
+                We partner with ethical artisans and factories that prioritize
+                fair wages and safe working conditions. Plus, we donate a
+                portion of our profits to environmental causes, helping to
+                protect the world we all share.
+              </p>
+              <p>
+                Shop with us and be part of a movement to make fashion more
+                sustainable, one outfit at a time.
+              </p>
+              <a href="#">Shop Sustainable</a>
+            </div>
+            <div class="sustainability-image">
+              <img
+                src="images/sustainability.jpg"
+                alt="Eco-friendly fashion production"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo"
+              >TrendVibe<span>Threads</span></a
+            >
+            <p>
+              TrendVibe Threads is your destination for stylish, high-quality
+              clothing. We’re passionate about fashion that inspires confidence,
+              sustainability, and individuality.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/shop.html">Shop</a></li>
+              <li><a href="pages/collection.html">Collections</a></li>
+              <li><a href="pages/about.html">About</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 456 Fashion Ave, Style City,
+              USA
+            </p>
+            <p><i class="fas fa-phone"></i> +1 987 654 321</p>
+            <p><i class="fas fa-envelope"></i> support@trendvibethreads.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 TrendVibe Threads. All Rights Reserved. |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms & Conditions</a> |
+            <a href="/faq">FAQ</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

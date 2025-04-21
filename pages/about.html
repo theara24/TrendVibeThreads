@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about TrendVibe Threads, your destination for sustainable and stylish clothing. Discover our story, values, and team."
+    />
+    <meta
+      name="keywords"
+      content="about, TrendVibe Threads, fashion, clothing, sustainable fashion, inclusive fashion"
+    />
+    <meta property="og:title" content="TrendVibe Threads - About Us" />
+    <meta
+      property="og:description"
+      content="Explore the story behind TrendVibe Threads, our commitment to sustainability and inclusivity, and meet our passionate team."
+    />
+    <meta property="og:image" content="images/fashion-og-image.png" />
+    <title>TrendVibe Threads - About Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: #ff6f61;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .active {
+        color: #ff6f61;
+      }
+
+      .nav-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-icons a {
+        margin-left: 20px;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s;
+        text-decoration: none;
+      }
+
+      .nav-icons a:hover {
+        color: #ff6f61;
+      }
+
+      .cart-count {
+        position: relative;
+      }
+
+      .cart-count span {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #ff6f61;
+        color: #fff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('../images/aboutus.png') no-repeat center/cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+        color: #1a1a1a;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title h2::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 2px;
+        background-color: #ff6f61;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .our-story {
+        padding: 80px 0;
+        background-color: #fff;
+      }
+
+      .story-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .story-text h3 {
+        font-size: 24px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .story-text p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .story-image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .story-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .story-image:hover img {
+        transform: scale(1.05);
+      }
+
+      .our-values {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .value-card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .value-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .value-icon {
+        font-size: 40px;
+        color: #ff6f61;
+        margin-bottom: 20px;
+      }
+
+      .value-card h3 {
+        font-size: 20px;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+      }
+
+      .value-card p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .our-team {
+        padding: 80px 0;
+        background-color: #fff;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .member-image {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .member-image:hover img {
+        transform: scale(1.1);
+      }
+
+      .team-member h3 {
+        font-size: 18px;
+        color: #1a1a1a;
+        margin-bottom: 5px;
+      }
+
+      .team-member p {
+        font-size: 14px;
+        color: #ff6f61;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .social-links a {
+        color: #555;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #ff6f61;
+      }
+
+      .community-impact {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+
+      .impact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .impact-text h3 {
+        font-size: 24px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .impact-text p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .impact-text .btn {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+
+      .impact-text .btn:hover {
+        background-color: #e55a50;
+      }
+
+      .impact-image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .impact-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .impact-image:hover img {
+        transform: scale(1.05);
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 60px 0 0;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-logo span {
+        color: #ff6f61;
+      }
+
+      .footer-about p {
+        margin-bottom: 20px;
+        color: #bdc3c7;
+        font-size: 14px;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 15px;
+      }
+
+      .footer-social a {
+        color: #fff;
+        background-color: #2c2c2c;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+
+      .footer-social a:hover {
+        background-color: #ff6f61;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h3::after,
+      .footer-contact h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #ff6f61;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links ul li a {
+        color: #bdc3c7;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 14px;
+      }
+
+      .footer-links ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .footer-contact p {
+        margin-bottom: 15px;
+        color: #bdc3c7;
+        display: flex;
+        align-items: flex-start;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #ff6f61;
+      }
+
+      .payment-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .payment-icons img {
+        height: 30px;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+      }
+
+      .payment-icons img:hover {
+        filter: grayscale(0%);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #2c2c2c;
+        color: #bdc3c7;
+        font-size: 14px;
+      }
+
+      .footer-bottom a {
+        color: #ff6f61;
+        text-decoration: none;
+      }
+
+      .footer-bottom a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 992px) {
+        .story-content,
+        .impact-content {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 36px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          padding: 15px 0;
+        }
+
+        nav ul {
+          margin-top: 15px;
+        }
+
+        nav ul li {
+          margin-left: 15px;
+        }
+
+        .section-title h2 {
+          font-size: 30px;
+        }
+
+        .member-image {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 5px 0;
+        }
+
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        .section-title h2 {
+          font-size: 26px;
+        }
+
+        .value-card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="../index.html" class="logo">TrendVibe<span>Threads</span></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collection.html">Collections</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <a href="#" aria-label="Search products"
+            ><i class="fas fa-search"></i
+          ></a>
+          <a href="#" aria-label="User account"><i class="fas fa-user"></i></a>
+          <a href="#" class="cart-count" aria-label="Shopping cart with 2 items"
+            ><i class="fas fa-shopping-bag"></i><span>2</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>About TrendVibe Threads</h1>
+          <p>
+            Crafting stylish, sustainable, and inclusive fashion that inspires
+            confidence and individuality.
+          </p>
+        </div>
+      </section>
+  
+      <section class="our-story">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Story</h2>
+          </div>
+          <div class="story-content">
+            <div class="story-text">
+              <h3>Where Style Meets Purpose</h3>
+              <p>
+                TrendVibe Threads was founded in 2018 with a mission to redefine
+                fashion. Our journey began in a small studio, driven by a passion
+                for creating clothing that’s both stylish and sustainable. Today,
+                we’re a global brand known for our commitment to quality and
+                inclusivity.
+              </p>
+              <p>
+                Every design reflects our dedication to ethical production and
+                environmental responsibility. From sourcing eco-friendly fabrics
+                to partnering with fair-trade artisans, we ensure our clothing
+                makes a positive impact.
+              </p>
+              <p>
+                Join us in celebrating fashion that empowers everyone to express
+                their unique style.
+              </p>
+            </div>
+            <div class="story-image">
+              <img src="../images/ourstory.png" alt="TrendVibe Threads studio" />
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="our-values">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Values</h2>
+          </div>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3>Sustainability</h3>
+              <p>
+                Using eco-friendly materials and ethical practices to protect our
+                planet.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Inclusivity</h3>
+              <p>
+                Designing for all body types with diverse and accessible sizing.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3>Quality</h3>
+              <p>Crafting durable, timeless pieces that elevate your wardrobe.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="our-team">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Team</h2>
+          </div>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-image">
+                <img src="../images/profile1.png" alt="Emma Larson, Founder" />
+              </div>
+              <h3>Emma Larson</h3>
+              <p>Founder & CEO</p>
+              <div class="social-links">
+                <a href="#" aria-label="Emma's LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Emma's Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-image">
+                <img
+                  src="../images/profile2.png"
+                  alt="Lucas Chen, Creative Director"
+                />
+              </div>
+              <h3>Lucas Chen</h3>
+              <p>Creative Director</p>
+              <div class="social-links">
+                <a href="#" aria-label="Lucas's LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Lucas's Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="member-image">
+                <img
+                  src="../images/profile3.png"
+                  alt="Sophia Patel, Marketing Manager"
+                />
+              </div>
+              <h3>Sophia Patel</h3>
+              <p>Marketing Manager</p>
+              <div class="social-links">
+                <a href="#" aria-label="Sophia's LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Sophia's Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="community-impact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Community Impact</h2>
+          </div>
+          <div class="impact-content">
+            <div class="impact-text">
+              <h3>Fashion with a Purpose</h3>
+              <p>
+                We’re committed to making a difference. By collaborating with
+                local artisans, we support traditional craftsmanship and provide
+                fair wages. Our sustainability initiatives include using recycled
+                materials and offering a clothing take-back program.
+              </p>
+              <p>
+                We also donate 5% of our profits to organizations empowering women
+                and promoting environmental conservation. Together, we’re building
+                a brighter, more inclusive future.
+              </p>
+              <a href="#" class="btn">Get Involved</a>
+            </div>
+            <div class="impact-image">
+              <img
+                src="../images/ourcomunity.png"
+                alt="TrendVibe Threads community event"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo"
+              >TrendVibe<span>Threads</span></a
+            >
+            <p>
+              TrendVibe Threads is your destination for stylish, high-quality
+              clothing. We’re passionate about fashion that inspires confidence,
+              sustainability, and individuality.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="collection.html">Collections</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 456 Fashion Ave, Style City,
+              USA
+            </p>
+            <p><i class="fas fa-phone"></i> +1 987 654 321</p>
+            <p><i class="fas fa-envelope"></i> support@trendvibethreads.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 TrendVibe Threads. All Rights Reserved. |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms & Conditions</a> |
+            <a href="/faq">FAQ</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

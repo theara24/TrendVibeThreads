@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact TrendVibe Threads for inquiries, support, or feedback. Reach out to our team for all your fashion needs."
+    />
+    <meta
+      name="keywords"
+      content="contact, TrendVibe Threads, fashion, clothing, customer support"
+    />
+    <meta property="og:title" content="TrendVibe Threads - Contact Us" />
+    <meta
+      property="og:description"
+      content="Get in touch with TrendVibe Threads for any questions or support. We're here to help!"
+    />
+    <meta property="og:image" content="images/fashion-og-image.png" />
+    <title>TrendVibe Threads - Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: #ff6f61;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .nav-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-icons a {
+        margin-left: 20px;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s;
+        text-decoration: none;
+      }
+
+      .nav-icons a:hover {
+        color: #ff6f61;
+      }
+
+      .cart-count {
+        position: relative;
+      }
+
+      .cart-count span {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #ff6f61;
+        color: #fff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .active {
+        color: #ff6f61;
+      }
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('../images/contactus.png') no-repeat center/cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-section {
+        padding: 80px 0;
+        background-color: #fff;
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .contact-form h2,
+      .contact-info h2 {
+        font-size: 28px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: #ff6f61;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #e55a50;
+      }
+
+      .contact-info {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .info-item i {
+        font-size: 20px;
+        color: #ff6f61;
+        margin-right: 15px;
+        margin-top: 4px;
+      }
+
+      .info-item p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .faq-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+
+      .faq-section h2 {
+        font-size: 36px;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+      }
+
+      .faq-item {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question {
+        padding: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        color: #1a1a1a;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .faq-question:hover {
+        background-color: #ff6f61;
+        color: #fff;
+      }
+
+      .faq-answer {
+        padding: 0 20px 20px;
+        font-size: 16px;
+        color: #555;
+        display: none;
+      }
+
+      .faq-item:hover .faq-answer {
+        display: block;
+      }
+
+      .store-locator {
+        padding: 80px 0;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .store-locator h2 {
+        font-size: 36px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .store-locator p {
+        font-size: 16px;
+        color: #555;
+        max-width: 600px;
+        margin: 0 auto 40px;
+      }
+
+      .map-placeholder {
+        max-width: 100%;
+        height: 400px;
+        background: url('images/store-map-placeholder.png') no-repeat
+          center/cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .newsletter {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('images/newsletter-bg.jpg') no-repeat center/cover;
+        text-align: center;
+        color: #fff;
+      }
+
+      .newsletter h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .newsletter p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .newsletter-form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .newsletter-form input {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 16px;
+      }
+
+      .newsletter-form button {
+        background-color: #ff6f61;
+        color: #fff;
+        border: none;
+        padding: 0 30px;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+
+      .newsletter-form button:hover {
+        background-color: #e55a50;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 60px 0 0;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-logo span {
+        color: #ff6f61;
+      }
+
+      .footer-about p {
+        margin-bottom: 20px;
+        color: #bdc3c7;
+        font-size: 14px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        color: #fff;
+        background-color: #2c2c2c;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+
+      .social-links a:hover {
+        background-color: #ff6f61;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h3::after,
+      .footer-contact h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #ff6f61;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links ul li a {
+        color: #bdc3c7;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 14px;
+      }
+
+      .footer-links ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .footer-contact p {
+        margin-bottom: 15px;
+        color: #bdc3c7;
+        display: flex;
+        align-items: flex-start;
+        font-size: 14px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #ff6f61;
+      }
+
+      .payment-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .payment-icons img {
+        height: 30px;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+      }
+
+      .payment-icons img:hover {
+        filter: grayscale(0%);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #2c2c2c;
+        color: #bdc3c7;
+        font-size: 14px;
+      }
+
+      .footer-bottom a {
+        color: #ff6f61;
+        text-decoration: none;
+      }
+
+      .footer-bottom a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          padding: 15px 0;
+        }
+
+        nav ul {
+          margin-top: 15px;
+        }
+
+        nav ul li {
+          margin-left: 15px;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .contact-container {
+          grid-template-columns: 1fr;
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+
+        .newsletter-form input {
+          border-radius: 30px;
+          margin-bottom: 10px;
+        }
+
+        .newsletter-form button {
+          border-radius: 30px;
+          padding: 15px;
+        }
+
+        .map-placeholder {
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 5px 0;
+        }
+
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        .btn {
+          padding: 10px 20px;
+        }
+
+        .faq-section h2,
+        .store-locator h2,
+        .newsletter h2 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="../index.html" class="logo">TrendVibe<span>Threads</span></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collection.html">Collections</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <a href="#" aria-label="Search products"
+            ><i class="fas fa-search"></i
+          ></a>
+          <a href="#" aria-label="User account"><i class="fas fa-user"></i></a>
+          <a href="#" class="cart-count" aria-label="Shopping cart with 2 items"
+            ><i class="fas fa-shopping-bag"></i><span>2</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Connect With Us</h1>
+          <p>
+            Have questions about our clothing or need support? We're here to help
+            you find your perfect style!
+          </p>
+        </div>
+      </section>
+  
+      <section class="contact-section">
+        <div class="container contact-container">
+          <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  aria-label="Your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                  aria-label="Your email address"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  aria-label="Select subject"
+                >
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="order">Order Inquiry</option>
+                  <option value="returns">Returns & Exchanges</option>
+                  <option value="product">Product Questions</option>
+                  <option value="general">General Feedback</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message"
+                  required
+                  aria-label="Your message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>456 Fashion Ave, Style City, USA</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>+1 987 654 321</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>support@trendvibethreads.com</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <p>Mon-Fri: 9AM - 6PM<br />Sat: 10AM - 4PM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="faq-section">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <div class="faq-question">How can I track my order?</div>
+            <div class="faq-answer">
+              <p>
+                You can track your order by logging into your account and visiting
+                the "Order Tracking" section. You'll receive a tracking number
+                once your order ships.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What is your return policy?</div>
+            <div class="faq-answer">
+              <p>
+                We offer a 30-day return policy for unworn items in their original
+                condition. Please visit our Returns page for more details.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Do you ship internationally?</div>
+            <div class="faq-answer">
+              <p>
+                Yes, we ship to many countries worldwide. Shipping costs and times
+                vary by location. Check our Shipping Policy for more information.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How do I know my size?</div>
+            <div class="faq-answer">
+              <p>
+                Our size guide is available on each product page. You can also
+                contact our support team for personalized assistance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="newsletter">
+        <div class="container">
+          <h2>Join Our Fashion Community</h2>
+          <p>Subscribe for exclusive offers, new arrivals, and style tips.</p>
+          <form class="newsletter-form" action="#" method="POST">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+              aria-label="Email for newsletter"
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo"
+              >TrendVibe<span>Threads</span></a
+            >
+            <p>
+              TrendVibe Threads is your destination for stylish, high-quality
+              clothing. We’re passionate about fashion that inspires confidence,
+              sustainability, and individuality.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="collection.html">Collections</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 456 Fashion Ave, Style City,
+              USA
+            </p>
+            <p><i class="fas fa-phone"></i> +1 987 654 321</p>
+            <p><i class="fas fa-envelope"></i> support@trendvibethreads.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 TrendVibe Threads. All Rights Reserved. |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms & Conditions</a> |
+            <a href="/faq">FAQ</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

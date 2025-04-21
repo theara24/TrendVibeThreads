@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shop the latest fashion trends at TrendVibe Threads. Discover stylish clothing for men, women, and accessories."
+    />
+    <meta
+      name="keywords"
+      content="clothing, fashion, shop, TrendVibe Threads, apparel"
+    />
+    <meta
+      property="og:title"
+      content="TrendVibe Threads - Shop Stylish Clothing"
+    />
+    <meta
+      property="og:description"
+      content="Browse our premium clothing collections at TrendVibe Threads."
+    />
+    <meta property="og:image" content="images/fashion-og-image.png" />
+    <title>TrendVibe Threads - Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: #ff6f61;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .nav-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-icons a {
+        margin-left: 20px;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s;
+        text-decoration: none;
+      }
+
+      .nav-icons a:hover {
+        color: #ff6f61;
+      }
+
+      .cart-count {
+        position: relative;
+      }
+
+      .cart-count span {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #ff6f61;
+        color: #fff;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('../images/shop.png') no-repeat center/cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #e55a50;
+      }
+
+      .shop-section {
+        padding: 80px 0;
+        background-color: #fff;
+      }
+
+      .shop-container {
+        display: flex;
+        gap: 30px;
+      }
+
+      /* Filter Sidebar */
+      .filter-sidebar {
+        flex: 0 0 250px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .filter-sidebar h3 {
+        font-size: 20px;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .filter-sidebar h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #ff6f61;
+      }
+
+      .filter-group {
+        margin-bottom: 20px;
+      }
+
+      .filter-group label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .filter-group input[type='checkbox'] {
+        margin-right: 10px;
+      }
+
+      .filter-group input[type='checkbox'] + span {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .product-grid-container {
+        flex: 1;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: #555;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .product-card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .product-image {
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .product-info {
+        padding: 20px;
+      }
+
+      .product-info h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #1a1a1a;
+      }
+
+      .product-info p {
+        color: #555;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .product-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .price {
+        font-weight: 700;
+        font-size: 20px;
+        color: #1a1a1a;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: #999;
+        margin-right: 10px;
+      }
+
+      .add-to-cart {
+        background-color: #1a1a1a;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+
+      .add-to-cart:hover {
+        background-color: #ff6f61;
+      }
+
+      .pagination {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .pagination a {
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 0 5px;
+        background-color: #f9f9f9;
+        color: #1a1a1a;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .active {
+        color: #ff6f61;
+      }
+
+      .pagination a:hover,
+      .pagination a.active {
+        background-color: #ff6f61;
+        color: #fff;
+      }
+
+      .newsletter {
+        padding: 80px 0;
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+
+      .newsletter-form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .newsletter-form input {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 16px;
+      }
+
+      .newsletter-form button {
+        background-color: #ff6f61;
+        color: #fff;
+        border: none;
+        padding: 0 30px;
+      }
+
+      .newsletter-form button:hover {
+        background-color: #e55a50;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 60px 0 0;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-logo span {
+        color: #ff6f61;
+      }
+
+      .footer-about p {
+        margin-bottom: 20px;
+        color: #bdc3c7;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        color: #fff;
+        background-color: #2c2c2c;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+
+      .social-links a:hover {
+        background-color: #ff6f61;
+      }
+
+      .footer-links h3,
+      .footer-contact h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h3::after,
+      .footer-contact h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #ff6f61;
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links ul li a {
+        color: #bdc3c7;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 14px;
+      }
+
+      .footer-links ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .footer-contact p {
+        margin-bottom: 15px;
+        color: #bdc3c7;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: #ff6f61;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #2c2c2c;
+        color: #bdc3c7;
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          padding: 15px 0;
+        }
+
+        nav ul {
+          margin-top: 15px;
+        }
+
+        nav ul li {
+          margin-left: 15px;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .shop-container {
+          flex-direction: column;
+        }
+
+        .filter-sidebar {
+          flex: 0 0 auto;
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+        }
+
+        .newsletter-form input {
+          border-radius: 30px;
+          margin-bottom: 10px;
+        }
+
+        .newsletter-form button {
+          border-radius: 30px;
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 5px 0;
+        }
+
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .btn {
+          padding: 10px 20px;
+        }
+
+        .section-title h2 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="../index.html" class="logo">TrendVibe<span>Threads</span></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="collection.html">Collections</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icons">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#" class="cart-count"
+            ><i class="fas fa-shopping-bag"></i><span>2</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Discover Your Style</h1>
+          <p>Browse our curated collection of trendy clothing and accessories</p>
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </section>
+  
+      <section class="shop-section" id="shop">
+        <div class="container shop-container">
+          <aside class="filter-sidebar">
+            <h3>Filter By</h3>
+            <div class="filter-group">
+              <label>Category</label>
+              <div>
+                <input type="checkbox" id="mens" name="category" />
+                <span>Men's Clothing</span>
+              </div>
+              <div>
+                <input type="checkbox" id="womens" name="category" />
+                <span>Women's Clothing</span>
+              </div>
+              <div>
+                <input type="checkbox" id="accessories" name="category" />
+                <span>Accessories</span>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label>Price Range</label>
+              <div>
+                <input type="checkbox" id="price-0-50" name="price" />
+                <span>$0 - $50</span>
+              </div>
+              <div>
+                <input type="checkbox" id="price-50-100" name="price" />
+                <span>$50 - $100</span>
+              </div>
+              <div>
+                <input type="checkbox" id="price-100-plus" name="price" />
+                <span>$100+</span>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label>Size</label>
+              <div>
+                <input type="checkbox" id="size-xs" name="size" />
+                <span>XS</span>
+              </div>
+              <div>
+                <input type="checkbox" id="size-s" name="size" />
+                <span>S</span>
+              </div>
+              <div>
+                <input type="checkbox" id="size-m" name="size" />
+                <span>M</span>
+              </div>
+              <div>
+                <input type="checkbox" id="size-l" name="size" />
+                <span>L</span>
+              </div>
+              <div>
+                <input type="checkbox" id="size-xl" name="size" />
+                <span>XL</span>
+              </div>
+            </div>
+          </aside>
+  
+          <div class="product-grid-container">
+            <div class="section-title">
+              <h2>All Products</h2>
+              <p>Explore our latest clothing and accessories</p>
+            </div>
+            <div class="product-grid">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="../images/chinos.jpg" alt="Denim Jacket" />
+                  <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                  <h3>Premium Denim Jacket</h3>
+                  <p>Classic fit with modern details</p>
+                  <div class="product-price">
+                    <div class="price">
+                      <span class="old-price">$89.99</span>
+                      $79.99
+                    </div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="../images/cloth4.png" alt="Graphic Tee" />
+                </div>
+                <div class="product-info">
+                  <h3>Graphic Tee</h3>
+                  <p>100% cotton, bold design</p>
+                  <div class="product-price">
+                    <div class="price">$29.99</div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="../images/denim-jacket.jpg" alt="Slim Fit Chinos" />
+                  <span class="product-badge">Sale</span>
+                </div>
+                <div class="product-info">
+                  <h3>Slim Fit Chinos</h3>
+                  <p>Versatile and comfortable</p>
+                  <div class="product-price">
+                    <div class="price">
+                      <span class="old-price">$69.99</span>
+                      $59.99
+                    </div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="../images/graphic-tee.jpg" alt="Casual Sneakers" />
+                </div>
+                <div class="product-info">
+                  <h3>Casual Sneakers</h3>
+                  <p>Stylish and durable</p>
+                  <div class="product-price">
+                    <div class="price">$99.99</div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="../images/sweater.jpg" alt="Knit Sweater" />
+                  <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                  <h3>Knit Sweater</h3>
+                  <p>Cozy and warm</p>
+                  <div class="product-price">
+                    <div class="price">$49.99</div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="../images/jean.png" alt="Floral Dress" />
+                </div>
+                <div class="product-info">
+                  <h3>Floral Summer Dress</h3>
+                  <p>Lightweight and elegant</p>
+                  <div class="product-price">
+                    <div class="price">$39.99</div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="newsletter">
+        <div class="container">
+          <div class="section-title">
+            <h2>Join Our Newsletter</h2>
+            <p>
+              Subscribe to get updates on new arrivals, special offers, and more.
+            </p>
+          </div>
+          <form class="newsletter-form" action="#" method="post">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo"
+              >TrendVibe<span>Threads</span></a
+            >
+            <p>
+              TrendVibe Threads is your destination for stylish, high-quality
+              clothing. We’re passionate about fashion that inspires confidence,
+              sustainability, and individuality.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="collection.html">Collections</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 456 Fashion Ave, Style City,
+              USA
+            </p>
+            <p><i class="fas fa-phone"></i> +1 987 654 321</p>
+            <p><i class="fas fa-envelope"></i> support@trendvibethreads.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 TrendVibe Threads. All Rights Reserved. |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms & Conditions</a> |
+            <a href="/faq">FAQ</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
